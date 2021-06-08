@@ -4,7 +4,8 @@ import './App.css';
 
 function App() {
   const [counterA, setCounterA] = useState(0);
-  const memoComponentA = useMemo(() => <ComponentA />, [])
+  // useMemo only re render if the dependencies have changed.
+  const memoComponentA = useMemo(() => <ComponentA count={ counterA } />, [ counterA ]);
 
   const incrementA = () => {
     setCounterA(counterA + 1);

@@ -1,14 +1,14 @@
 import { useEffect } from 'react';
 
 let renderCount = 0;
-const ComponentA = () => {
+const ComponentA = props => {
   useEffect(() => {
     renderCount++;
   })
   return (
     <div>
       <h1>
-        Component A render count: { renderCount }
+        Component A render count: { renderCount } || App counter: { props.count }
       </h1>
     </div>
   )

@@ -1,9 +1,10 @@
-import { useState } from 'react';
+import { useState, useMemo } from 'react';
 import ComponentA from 'components/ComponentA';
 import './App.css';
 
 function App() {
   const [counterA, setCounterA] = useState(0);
+  const memoComponentA = useMemo(() => <ComponentA />, [])
 
   const incrementA = () => {
     setCounterA(counterA + 1);
@@ -15,7 +16,7 @@ function App() {
       <p>
         <button onClick={ incrementA }>Increment A</button>
       </p>
-      <ComponentA />
+      { memoComponentA }
     </div>
   );
 }

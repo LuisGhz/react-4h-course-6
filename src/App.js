@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import ComponentA from 'components/ComponentA';
 import './App.css';
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
       <p>
         <button onClick={ incrementA }>Increment A</button>
       </p>
+      <ComponentA />
     </div>
   );
 }

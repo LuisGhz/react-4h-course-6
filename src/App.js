@@ -13,7 +13,7 @@ function App() {
     setCounterA(counterA + 1);
   }
   const incrementB = () => {
-    setCounterB(counterA + 1);
+    setCounterB(counterB + 1);
   }
 
   return (
